@@ -1,0 +1,144 @@
+/*全局通用*/
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#333;
+}
+
+.login_box{
+    height:auto;
+    width: 356px;
+    position: relative;
+    top:0;
+    left:0;
+    z-index:105;
+    padding: 0 0 30px 44px;
+    background-color: #ffeceb;
+    opacity: .9;
+}
+.login_box_title{
+    height: 70px;
+    margin-left: -38px;
+}
+.login_box_title>div{
+    float:left;
+    cursor:pointer;
+    width: 50%;
+    border-bottom: 1px solid #ccc;
+}
+.login_box_title>div:first-child{
+    color: #fe617a;
+    border-bottom: 1px solid #ff4066;
+}
+.login_box_title>div>span{
+    display: block;
+    width: 119px;
+    margin: 10px auto 0;
+    line-height: 42px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.login_box_content1{
+    width:100%;
+    height:auto;
+}
+.login_box_one1{
+    margin-bottom: 15px;
+}
+.login_box_one1>input{
+    height: 40px;
+    width: 300px;
+    background:none;
+    border: 1px solid #cfcfcf;
+    padding: 0 6px;
+    outline:none;
+}
+.login_box_two1{
+    margin-bottom: 15px;
+}
+.login_box_two1>input{
+    height: 40px;
+    width: 300px;
+    background:none;
+    border: 1px solid #cfcfcf;
+    padding: 0 6px;
+    outline:none;
+}
+.login_box_three1{
+    margin-top: 10px;
+    overflow:hidden;
+}
+.login_box_ct1_inp{
+    display: block;
+    float: left;
+    border: none;
+    width: 314px;
+    height: 40px;
+    background: #ff5777;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.login_box_content2{
+    width:100%;
+    height:auto;
+    display:none;
+}
+.login_box_one2{
+    position: relative;
+    margin-bottom: 15px;
+}
+.login_box_one2>input{
+    height: 40px;
+    width: 300px;
+    background:none;
+    border: 1px solid #cfcfcf;
+    padding: 0 6px;
+    outline:none;
+}
+.login_box_three2{
+    margin-top: 10px;
+    overflow:hidden;
+}
+.login_box_two2{
+    position:relative;
+    margin-bottom: 15px;
+}
+.login_box_two2>a{
+    display: inline-block;
+    width: 110px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin-right: 10px;
+    font-size:12px;
+    color: #fff;
+    background-color: #ff5777;
+}
+.login_box_two2>input{
+    margin-left: -4px;
+    height: 40px;
+    background: none!important;
+    border: 1px solid #cfcfcf;
+    padding: 0 6px;
+}
+.login_bk{
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    zoom: 1;
+    position: fixed;
+    z-index: 100;
+    opacity: .3;
+}
