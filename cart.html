@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车</title>
+    <link rel="icon" href="./img/icon.ico">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/cart.jQuery.js"></script>
+</head>
+<body style="font-family: Microsoft YaHei;">
+
+    <!--登陆框-->
+    <div id="login">
+        <div class="login_box">
+            <div class="login_box_title">
+                <div class="login_box_tl_pt"><span>普通登录</span></div>
+                <div class="login_box_tl_sj"><span>手机登录</span></div>
+                <a class="login_box_close">x</a>
+            </div>
+
+            <div class="login_box_content1">
+                <div class="login_box_one1">
+                    <input type="text" name="uname" placeholder="请输入用户名/邮箱/手机号">
+                </div>
+                <div class="login_box_two1">
+                    <input type="password" name="upwd" placeholder="密码">
+                </div>
+                <div class="login_box_three1">
+                    <input class="login_box_ct1_inp" type="submit" value="登陆">
+                </div>
+            </div>
+
+            <div class="login_box_content2">
+                <div class="login_box_one2">
+                    <input type="text" name="uphone" placeholder="请输入手机号">
+                </div>
+                <div class="login_box_two2">
+                    <a href="#">获取动态密码</a>
+                    <input type="text" name="uyz" placeholder="动态密码">
+                </div>
+                <div class="login_box_three2">
+                    <input class="login_box_ct1_inp" type="submit" value="登陆">
+                </div>
+            </div>
+        </div>
+
+        <div class="login_bk">
+
+        </div>
+
+    </div>
+
+    <!--网页头部-->
+    <div id="header">
+
+        <!--网页顶部导航栏-->
+        <div class="navigation">
+            <div class="wrap">
+                <!--wrap_left-->
+                <a href="#" class="wrap_left">蘑菇街首页</a>
+
+                <!--wrap_right-->
+                <ul class="wrap_right">
+                    <li>
+                        <a href="register.html">注册</a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">登陆</a>
+                    </li>
+
+                    <li>
+                        <span>|</span><a href="#">我的订单</a>
+                    </li>
+
+                    <li>
+                        <span>|</span><a href="#">购物车</a>
+                        <div class="gwc">购物车里没有商品</div>
+                    </li>
+
+                    <li>
+                        <span>|</span><a href="#">客户服务</a>
+                        <div class="khfw">
+                            <ul>
+                                <li>消费者服务</li>
+                                <li>商家服务</li>
+                                <li>规则中心</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>|</span><a href="#">我的小店</a>
+                        <div class="mydian">
+                            <ul>
+                                <li>管理后台</li>
+                                <li>商家社区</li>
+                                <li>商家培训</li>
+                                <li>市场入住</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--网页顶部搜索域-->
+        <div class="searching">
+
+            <div class="searching_k">
+
+                <!--searching_left-->
+                <a href="#" class="searching_left"></a>
+
+                <!--searching_center-->
+                <div class="searching_center">
+                    <div class="searching_inp">
+                        <!--searching_ssk-->
+                        <div class="searching_ssk">
+                            <div class="searching_ssp">
+                                <span>搜商品</span>
+                            </div>
+                            <form action="" method="" class="searching_srk">
+                                <input type="text" placeholder="露背无袖连衣裙">
+                                <input type="submit" value="搜索">
+                            </form>
+                        </div>
+
+                        <!--searching_tj-->
+                        <div class="searching_tj">
+                            <a href="#">夏凉节</a>
+                            <a href="#">连衣裙</a>
+                            <a href="#">时尚套装</a>
+                            <a href="#">小白鞋</a>
+                            <a href="#">睡衣</a>
+                            <a href="#">短裤</a>
+                            <a href="#">吊带背心</a>
+                            <a href="#">凉鞋</a>
+                            <a href="#">手机壳</a>
+                            <a href="#">短袖t恤</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--searching_right-->
+                <div class="searching_right">
+                    <img src="./img/index-ewm.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--/网页头部-->
+
+    <!--网页主体-->
+    <div id="bodyer">
+        <div>
+            <div class="bodyer_first_div">
+                <a href="#"> 全部商品 </a>
+                <span>2</span>
+            </div>
+            <div class="bodyer_second_div">
+                <table class="second_table">
+                    <thead>
+                        <tr>
+                            <th class="second_thead_th1">
+                                <input type="checkbox" checked="checked">
+                                <div>全选</div>
+                            </th>
+                            <th class="second_thead_th2"></th>
+                            <th class="second_thead_th3">商品信息</th>
+                            <th class="second_thead_th4">单价(元)</th>
+                            <th class="second_thead_th5">数量</th>
+                            <th class="second_thead_th6">小计(元)</th>
+                            <th class="second_thead_th7">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="second_tbody_tr1">
+                            <td>
+                                <input type="checkbox" checked="checked">
+                                <a href="#">小迷糊官方旗舰店</a>
+                                <a href="#"></a>
+                                <img src="./img/details-liangpin.png" alt="">
+                                <div>
+                                    <a href="#">去店铺凑单 ></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="second_tbody_tr2">
+                            <td>
+                                <input class="input0" type="checkbox" checked="checked">
+                            </td>
+                            <td>
+                                <a class="second_tbody_tr2_a1" href="#">
+                                    <img src="./img/cart-img1.jpg" alt="">
+                                </a>
+                                <a class="second_tbody_tr2_a2" href="#">
+                                    <em>  99元任选5件  </em>【99元任选5件】御泥坊小迷糊玻尿酸补水保湿竹炭黑面膜7片
+                                </a>
+                            </td>
+                            <td>
+                                <p>规格：7片/盒</p>
+                            </td>
+                            <td>
+                                <p>66.44</p>
+                                <p class="price1"> 30 </p>
+                            </td>
+                            <td>
+                                <div>
+                                    <input class="second_tbody_tr2_td5_ipt1" type="text" value="1">
+                                    <span class="second_tbody_tr2_td5_jia1">+</span>
+                                    <span class="second_tbody_tr2_td5_jian1">-</span>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="one_price1">30</p>
+                            </td>
+                            <td>
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                        <tr class="second_tbody_tr2">
+                            <td>
+                                <input class="input0" type="checkbox" checked="checked">
+                            </td>
+                            <td>
+                                <a class="second_tbody_tr2_a1" href="#">
+                                    <img src="./img/cart-img2.jpg" alt="">
+                                </a>
+                                <a class="second_tbody_tr2_a2" href="#">
+                                    御泥坊小迷糊玻尿酸补水保湿黑面膜共14片控油
+                                </a>
+                            </td>
+                            <td>
+                                <p>规格：14片</p>
+                            </td>
+                            <td>
+                                <p>159.80</p>
+                                <p class="price2">50</p>
+                            </td>
+                            <td>
+                                <div>
+                                    <input class="second_tbody_tr2_td5_ipt2" type="text" value="1">
+                                    <span class="second_tbody_tr2_td5_jia2">+</span>
+                                    <span class="second_tbody_tr2_td5_jian2">-</span>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="one_price2">50</p>
+                            </td>
+                            <td>
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bodyer_thirdy">
+                <a class="thirdy_fk" href="#">去付款</a>
+                <div class="thirdy_price">
+                    80
+                </div>
+                <div class="thirdy_num">
+                    共有
+                    <span>2</span>
+                    件商品，总计：
+                </div>
+                <div class="thirdy_left">
+                    <input type="checkbox" checked="checked">
+                    <div class="thirdy_left_all">全选</div>
+                    <div class="thirdy_left_other">反选</div>
+                    <div class="thirdy_left_noall">全不选</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/网页主体-->
+
+    <!--网页底部-->
+    <div id="footer">
+        <div class="footer">
+            <div class="footer_first">
+                <div class="footer_first_one">
+                    <div class="footer_first_one_header">
+                        <h4 class="footer_one_header_hn">- 新手帮助 -</h4>
+                        <ul class="footer_one_header_ul">
+                            <li><a href="#">常见问题</a></li>
+                            <li><a href="#">自助服务</a></li>
+                            <li><a href="#">联系客服</a></li>
+                            <li><a href="#">意见反馈</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_first_two">
+                    <div class="footer_first_one_header">
+                        <h4 class="footer_one_header_hn">- 权益保障 -</h4>
+                        <ul class="footer_one_header_ul">
+                            <li><a>全国包邮</a></li>
+                            <li><a>7天无理由退货</a></li>
+                            <li><a>退货运费补贴</a></li>
+                            <li><a>限时发货</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_first_three">
+                    <div class="footer_first_one_header">
+                        <h4 class="footer_one_header_hn">- 支付方式 -</h4>
+                        <ul class="footer_one_header_ul">
+                            <li><a>微信支付</a></li>
+                            <li><a>支付宝</a></li>
+                            <li><a>白付美支付</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_first_four">
+                    <div class="footer_first_one_header">
+                        <h4 class="footer_one_header_hn">- 移动客户端下载 -</h4>
+                        <ul class="footer_one_header_ul">
+                            <li class="footer_ewmlist">
+                                <a>蘑菇街</a>
+                                <img class="footer_ewm" src="./img/index-footer_ewm1.png" alt="">
+                            </li>
+                            <li class="footer_ewmlist">
+                                <a>美丽说</a>
+                                <img class="footer_ewm" src="./img/index-footer_ewm2.png" alt="">
+                            </li>
+                            <li class="footer_ewmlist">
+                                <a>uni引力</a>
+                                <img class="footer_ewm" src="./img/index-footer_ewm3.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_two">
+                <p class="footer_two_p">
+                    <a href="#">美丽说</a>
+                    <span>|</span>
+                    <a href="#">蘑菇街游戏</a>
+                    <span>|</span>
+                    <a href="#">淘粉吧</a>
+                    <span>|</span>
+                    <a href="#">穿衣搭配</a>
+                    <span>|</span>
+                    <a href="#">秋季女装新款</a>
+                    <span>|</span>
+                    <a href="#">秋季连衣裙长袖</a>
+                    <span>|</span>
+                    <a href="#">秋季孕妇装</a>
+                    <span>|</span>
+                    <a href="#">QQ钱包</a>
+                    <span>|</span>
+                    <a href="#">时尚品牌网</a>
+                    <span>|</span>
+                    <a href="#">装修</a>
+                    <span>|</span>
+                    <a href="#">背带裤搭配</a>
+                    <span>|</span>
+                    <a href="#">衣联网</a>
+                    <span>|</span>
+                    <a href="#">播视网视频</a>
+                    <span>|</span>
+                    <a href="#">慧聪网</a>
+                    <span>|</span>
+                    <a href="#">衬衫搭配</a>
+                    <span>|</span>
+                    <a href="#">牛仔外套搭配图片</a>
+                    <span>|</span>
+                    <a href="#">冬装时尚搭配</a>
+                    <span>|</span>
+                    <a href="#">针织衫搭配</a>
+                    <span>|</span>
+                    <a href="#">牛仔衣搭配</a>
+                    <span>|</span>
+                    <a href="#">风衣搭配</a>
+                    <span>|</span>
+                    <a href="#">补水面膜排行榜</a>
+                    <span>|</span>
+                    <a href="#">爱蘑菇街</a>
+                </p>
+            </div>
+            <div class="footer_three">
+                <ul>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="#">招聘信息</a>
+                    </li>
+                    <li>
+                        <a href="#">联系我们</a>
+                    </li>
+                    <li>
+                        <a href="#">商家入驻</a>
+                    </li>
+                    <li>
+                        <a href="#">商家后台</a>
+                    </li>
+                    <li>
+                        <a href="#">蘑菇商学院</a>
+                    </li>
+                    <li>
+                        <a href="#">商家社区</a>
+                    </li>
+                </ul>
+                <p class="footer_three_p">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
+            </div>
+            <div class="footer_four">
+                <p>
+                    <span>营业执照注册号：</span>
+                    <a href="#">330106000129004</a>
+                    <b>|</b>
+                    <span>网络文化经营许可证：</span>
+                    <a href="#">浙网文（2016）0349-219号</a>
+                    <b>|</b>
+                    <span>增值电信业务经营许可证：</span>
+                    <a href="#">浙B2-20110349</a>
+                    <b>|</b>
+                    <a href="#">安全责任书</a>
+                    <b>|</b>
+                    <a href="#">浙公网安备 33010602002329号</a>
+                    <b>|</b>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--/网页底部-->
+
+</body>
+</html>
